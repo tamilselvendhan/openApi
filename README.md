@@ -1,7 +1,7 @@
 # openApi
 Integrate OpenAPI with SpringBoot
 
-Descritption:
+**Descritption:**
 
 Create Api's from OpenAPi configuration. So don't need to use number of annotaions in the controller class.
 
@@ -12,7 +12,7 @@ In future we can use the same config for backend api and front-end services in a
 So incase there is a change in the api then if change inthe yaml file and ran config it's enough. Changes will be reflected in both front-and and back-end
 
 
-How to run:
+**How to run:**
 
 1. As usual import project.
 2. I assum you already setup Java and Maven home paths.
