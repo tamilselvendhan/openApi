@@ -1,0 +1,32 @@
+openapi: 3.0.2
+info:
+  title: Swagger Demo - openAPI 3.0
+  description: "This is an openapi documentataion for demo springboot project"
+  version: 1.0.0-SNAPSHOT
+servers:
+- url: https://8080-cs-893c7e3a-225d-452d-9e74-ab5aa98633c9.cs-asia-southeast1-yelo.cloudshell.dev/v3
+paths:
+  /crypto/all:
+    get:
+      tags:
+        - crypto-get-all
+      summary: Return all crypto coins data
+      operationId: getAllCrypto
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Crypto'
+components:
+  schemas:
+    Crypto:
+      properties:
+        name:
+          type: string
+        id:
+          type: string
+          
