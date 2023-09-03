@@ -109,10 +109,7 @@
   <version>2.8.0</version>
   <configuration>
     <container>
-      <jvmArgs>
-        <jvmArg>-Dserver.port=8080</jvmArg>
-        <jvmArg>-Dserver.contextPath=/</jvmArg>
-      </jvmArgs>
+      
       <server>tomcat9</server>
     </container>
   </configuration>
