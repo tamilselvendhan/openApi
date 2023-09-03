@@ -1,5 +1,5 @@
 # Use an official Java 17 runtime as the base image
-FROM adoptopenjdk:17-jre-hotspot-bionic
+FROM openjdk:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
