@@ -24,7 +24,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -72,37 +76,37 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-            <plugin>
-                <groupId>org.openapitools</groupId>
-                <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>6.3.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>
-                                ${project.basedir}/src/main/resources/demo-openapi.yaml
-                            </inputSpec>
-                            <generatorName>spring</generatorName>
-                            <library>spring-boot</library>
-                            <apiPackage>com.example.api</apiPackage>
-                            <modelPackage>com.example.model</modelPackage>
-                            <generateSupportingFiles>true</generateSupportingFiles>
-                            <generateModels>true</generateModels>
-                            <generateApis>true</generateApis>
-                            <modelNameSuffix>model</modelNameSuffix>
-                            <generateApiDocumentation>true</generateApiDocumentation>
-                            <configOptions>
-                                <delegatePattern>false</delegatePattern>
-                                <interfaceOnly>true</interfaceOnly>
-                                <skipDefaultInterace>true</skipDefaultInterace>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+			<plugin>
+			<groupId>org.openapitools</groupId>
+			<artifactId>openapi-generator-maven-plugin</artifactId>
+			<version>6.3.0</version>
+			<executions>
+			    <execution>
+				<goals>
+				    <goal>generate</goal>
+				</goals>
+				<configuration>
+				    <inputSpec>
+					${project.basedir}/src/main/resources/demo-openapi.yaml
+				    </inputSpec>
+				    <generatorName>spring</generatorName>
+				    <library>spring-boot</library>
+				    <apiPackage>com.example.api</apiPackage>
+				    <modelPackage>com.example.model</modelPackage>
+				    <generateSupportingFiles>true</generateSupportingFiles>
+				    <generateModels>true</generateModels>
+				    <generateApis>true</generateApis>
+				    <modelNameSuffix>model</modelNameSuffix>
+				    <generateApiDocumentation>true</generateApiDocumentation>
+				    <configOptions>
+					<delegatePattern>false</delegatePattern>
+					<interfaceOnly>true</interfaceOnly>
+					<skipDefaultInterace>true</skipDefaultInterace>
+				    </configOptions>
+				</configuration>
+			    </execution>
+			</executions>
+			</plugin>
 		</plugins>
 	</build>
 
